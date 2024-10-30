@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Showcase - Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Security Showcase</h1>
+    
+    <!-- Seção de Explicação do SQL Injection -->
+    <section class="info-section">
+      <h2>SQL Injection</h2>
+      <p>
+        SQL Injection é uma técnica de ataque onde comandos SQL maliciosos são inseridos em um campo de entrada com o objetivo de manipular o banco de dados.
+        Aqui, você pode testar o login vulnerável e o seguro para observar as diferenças.
+        <strong>Para tentar um ataque SQL Injection:</strong> Use uma entrada como <code>' OR 1=1 --</code> no campo de senha com qualquer email.
+      </p>
+    </section>
+
+    <p>Escolha uma opção de login:</p>
+    <div class="login-options">
+      <button onclick="login('vulneravel')">Login Vulnerável</button>
+      <button onclick="login('seguro')">Login Seguro</button>
+    </div>
+
+    <form id="loginForm" class="hidden">
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

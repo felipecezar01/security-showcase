@@ -1,0 +1,186 @@
+/* Estilo Global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c2f33; /* Fundo escuro estilo Discord */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Container Principal */
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #23272a;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Título Principal */
+h1 {
+    color: #7289da; /* Roxo estilo Discord */
+    margin-bottom: 20px;
+}
+
+/* Seção de Informações */
+.info-section, .explanation {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #3a3f44;
+    border-radius: 8px;
+    color: #d1d1d1;
+    text-align: left;
+}
+
+.info-section h2, .explanation h2 {
+    color: #7289da;
+    margin-top: 0;
+}
+
+.info-section p, .explanation p, .info-section ul, .explanation ul {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Estilo de Código em Linha */
+.info-section code, .explanation code {
+    background-color: #23272a; /* Fundo escuro */
+    color: #7289da; /* Texto roxo */
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Estilo de Código em Bloco */
+pre code {
+    display: block;
+    padding: 10px;
+    background-color: #23272a; /* Fundo escuro */
+    color: #7289da; /* Texto roxo */
+    border-radius: 5px;
+    font-size: 0.9em;
+    overflow-x: auto;
+}
+
+/* Botões Gerais */
+button {
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Botões de Login */
+.login-options button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Botão Vulnerável (Login e Comentários) */
+.login-options button:first-child, .btn-vulneravel {
+    background-color: #ff4c4c; /* Vermelho Claro para Vulnerável */
+}
+
+.login-options button:first-child:hover, .btn-vulneravel:hover {
+    background-color: #ff6666;
+}
+
+/* Botão Seguro (Login e Comentários) */
+.login-options button:last-child, .btn-seguro {
+    background-color: #4caf50; /* Verde Claro para Seguro */
+}
+
+.login-options button:last-child:hover, .btn-seguro:hover {
+    background-color: #66bb6a;
+}
+
+/* Formulário de Login */
+#loginForm {
+    margin-top: 20px;
+}
+
+/* Inputs do Formulário */
+#loginForm input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #2c2f33;
+    color: #ffffff;
+}
+
+/* Input Vulnerável (Login) */
+#loginForm.vulneravel #email,
+#loginForm.vulneravel #password {
+    background-color: #ffcccc; /* Fundo Vermelho Claro para Vulnerável */
+    color: #8b0000;
+}
+
+/* Input Seguro (Login) */
+#loginForm.seguro #email,
+#loginForm.seguro #password {
+    background-color: #ccffcc; /* Fundo Verde Claro para Seguro */
+    color: #006400;
+}
+
+/* Estilo do Botão Entrar (Login) */
+#loginForm button {
+    background-color: #7289da;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#loginForm button:hover {
+    background-color: #5b6eae;
+}
+
+/* Campo de Comentário (Comentários) */
+#commentInput {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #2c2f33;
+    color: #ffffff;
+}
+
+/* Exibição de Comentários (Comentários) */
+#commentsDisplay {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #2c2f33;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+/* Estilo de Cada Comentário */
+.comment {
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #23272a;
+    border-radius: 5px;
+    color: #ffffff;
+}
