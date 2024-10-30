@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comentários - XSS Showcase</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Comentários - XSS Showcase</h1>
+    
+    <!-- Seção de Explicação do XSS -->
+    <section class="info-section">
+      <h2>Cross-Site Scripting (XSS)</h2>
+      <p>
+        XSS é uma vulnerabilidade que permite a injeção de scripts maliciosos em uma página da web, potencialmente comprometendo a segurança e a experiência do usuário. Esta demonstração mostra a diferença entre um comentário vulnerável e um comentário seguro contra XSS.
+      </p>
+      <p>
+        <strong>Comentário Vulnerável:</strong> Utiliza <code>innerHTML</code> para renderizar o conteúdo diretamente, permitindo que tags HTML, como <code>&lt;iframe&gt;</code> e <code>&lt;script&gt;</code>, sejam interpretadas pelo navegador.
+      </p>
+      <p>
+        <strong>Comentário Seguro:</strong> Utiliza <code>textContent</code> para exibir o conteúdo como texto simples, prevenindo a execução de qualquer HTML ou script injetado.
+      </p>
+      <p><strong>Como testar um ataque XSS:</strong></p>
+      <ul>
+        <li>Para simular o ataque, insira o seguinte código no campo de comentário vulnerável:</li>
+        <pre><code>&lt;iframe src="https://example.com" width="300" height="200"&gt;&lt;/iframe&gt;</code></pre>
+      </ul>
+      <p>
+        A demonstração mostra como ataques XSS podem afetar a página ao incluir iframes ou scripts potencialmente perigosos, destacando a importância de tratar entradas de usuário com segurança.
+      </p>
+    </section>
+
+    <!-- Área de Comentário -->
+    <textarea id="commentInput" placeholder="Escreva seu comentário"></textarea>
+    <div class="comment-options">
+      <button class="btn-vulneravel" onclick="postComment('vulneravel')">Enviar Vulnerável</button>
+      <button class="btn-seguro" onclick="postComment('seguro')">Enviar Seguro</button>
+    </div>
+
+    <!-- Exibição de Comentários -->
+    <div id="commentsDisplay">
+      <!-- Comentários serão exibidos aqui -->
+    </div>
+  </div>
+
+  <script src="comments.js"></script>
+</body>
+</html>

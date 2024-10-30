@@ -14,6 +14,7 @@ const addCommentVulneravel = (req, res) => {
       console.error("Erro ao inserir comentário:", error);
       res.status(500).json({ message: 'Erro no servidor ao adicionar comentário' });
     } else {
+      // Retorna o comentário inserido sem sanitização para permitir XSS
       res.status(201).json({ message: 'Comentário adicionado (vulnerável a XSS)', comment: results.rows[0] });
     }
   });
